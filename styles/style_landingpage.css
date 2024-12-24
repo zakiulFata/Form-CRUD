@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #55adff;
+	--grey: #eee;
+	--dark-grey: #d05e5e;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+/* Mengatur body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--grey);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main section mengambil sisa tinggi antara header dan footer */
+main {
+    flex: 1;
+    margin: 2em auto;
+    padding: 2em;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer tetap di bawah */
+footer {
+    background: var(--blue);
+    color: var(--light);
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+/* Header dan Footer */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 5%;
+    background: var(--blue);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header h2 {
+    padding-left: 0;
+    font-size: 30px;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--light);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo :hover{
+    color: var(--grey);
+    text-shadow: 0 0 25px var(--grey),
+                 0 0 50px var(--grey);
+    transform: scale(1.1);
+}
+
+.navbar a{
+    font-size: 18px;
+    color: var(--light);
+    font-weight: 500;
+    margin: 0 20px ;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--grey);
+    border-bottom: 3px solid var(--grey);
+}
+
+/* Styling untuk Article dan Aside */
+.content-wrapper {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+}
+
+article, aside {
+    background-color: var(--grey);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(33, 58, 100, 0.2);
+}
+
+article:hover, aside:hover {
+    box-shadow: 0 8px 16px rgba(22, 8, 39, 0.4);
+}
+
+article h2, aside h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: var(--blue);
+    
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    gap: 2em;
+    flex: 3;
+}
+
+/* Styling untuk Aside */
+aside {
+    flex: 1;
+    text-align: center;
+}
+
+/* List Style */
+ul {
+    list-style-type: disc; /* Ubah dari 'circle' ke 'disc' jika ingin titik */
+    padding-left: 2em; /* Memberikan indentasi agar bullet lebih terlihat */
+    color: var(--dark); /* Warna teks */
+}
+
+ul li {
+    margin-bottom: 0.5em; /* Memberikan jarak antar item */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer p {
+    font-size: 0.9em;
+}
+
+/* Button Style */
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #c7cdd4, #4c2757);
+    color: #ffffff;
+    padding: 0.7em 1.5em;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9ab1d6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(33, 58, 100, 0.3);
+}
+
+/* Animasi tambahan */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY (-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tambahkan margin untuk memberi jarak */
+#intro {
+    margin-bottom: 2em;
+}
+
+.articles article {
+    margin-bottom: 2em;
+}
+
+/* Styling untuk biodata */
+.biodata {
+    margin-top: 1em;
+    text-align: center;
+}

@@ -1,0 +1,141 @@
+/* Reset dan font global */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #55adff;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #e63b35;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-blue); /* Menggunakan warna netral */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Membuat form berada di tengah halaman */
+}
+
+/* Container untuk form edit */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid var(--grey); /* Menambahkan border ringan */
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: var(--dark); /* Menggunakan warna gelap untuk heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label untuk input */
+label {
+    font-size: 1rem;
+    color: var(--dark); /* Menyesuaikan warna label */
+    margin-bottom: 5px;
+}
+
+/* Input text dan email */
+input[type="text"],
+input[type="email"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--grey); /* Menggunakan border abu-abu netral */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--blue); /* Mengubah border menjadi biru saat fokus */
+}
+
+/* Tombol submit */
+button[type="submit"] {
+    padding: 12px;
+    background-color: var(--blue); /* Menggunakan warna biru */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover tombol submit */
+button[type="submit"]:hover {
+    background-color: var(--light-blue); /* Mengubah warna saat hover */
+}
+.cancel {
+    padding: 12px;
+    background-color: var(--red); /* Menggunakan warna biru */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.cancel:hover {
+    background-color: #d4150e;
+}
+/* Responsivitas untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,265 @@
+/* Global Styling */
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #55adff;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+    --dark-light: #e7e7e7;
+    --light-red: #df1e1e;
+	--red: #DB504A;
+	--orange: #FD7238;
+	--light-orange: #ef5615;
+}
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: var(--light);
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: var(--dark);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 2px 0 #333;
+}
+
+/* Header and Search */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cari {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cari form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Input Search Styling */
+.cari form input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    outline: none;
+    width: 250px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+/* Input Search Focus */
+.cari form input[type="text"]:focus {
+    width: 280px;
+    border-color: var(--blue);
+}
+
+/* Button Search Styling */
+.cari form button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Search Button */
+.cari form button[type="submit"]:hover {
+    background-color: var(--light-blue);
+}
+
+a.back i {
+    font-size: 1.5rem;
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+a.back:hover i {
+    color: var(--blue);
+}
+
+/* Button Add Karyawan */
+.btn {
+    padding: 12px 20px;
+    background-color: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Add Karyawan Button */
+.btn:hover {
+    background-color: var(--light-blue);
+}
+
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+/* Table Styles - Modified */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--dark-light);
+    margin: 20px 0;
+}
+
+/* Table Header and Cells */
+th, td {
+    padding: 15px;
+    text-align: left;
+    color: var(--dark);
+    font-family: var(--lato);
+}
+
+/* Table Header */
+th {
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Table Rows */
+tr {
+    background-color: var(--light);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Rows */
+tr:hover {
+    background-color: var(--grey);
+}
+
+/* Zebra Striping for Table Rows */
+tr:nth-child(even) {
+    background-color: var(--light-);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Button Edit and Delete */
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    margin: 4px;
+}
+
+/* Ikon di dalam tombol */
+.btn i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Tombol Edit dan Delete mengikuti warna latar belakang baris */
+.btn-edit {
+    background-color: inherit; /* Menggunakan warna latar belakang elemen induk */
+    color: var(--orange); /* Atur warna teks tombol agar tetap terlihat */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn-delete {
+    background-color: inherit; /* Menggunakan warna latar belakang elemen induk */
+    color: var(--red); /* Atur warna teks tombol agar tetap terlihat */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: inherit;
+    color: var(--light-orange);
+    transform: scale(1.1); /* Efek pembesaran */
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: inherit;
+    color: var(--light-red);
+    transform: scale(1.1); /* Efek pembesaran */
+    cursor: pointer;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header .cari {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .cari form input[type="text"], .cari form button[type="submit"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
